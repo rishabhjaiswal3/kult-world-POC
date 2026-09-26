@@ -2,7 +2,7 @@ services:
   - type: web
     name: kult-world-perp-wars
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /api/ready
     envVars:
       - key: NODE_ENV
@@ -46,9 +46,10 @@ services:
       - key: OKX_PASSPHRASE
         sync: false
 
-      # Real A2A marketplace. Deployment will fail closed if external URLs are missing.
+      # POC: disabled so production can boot without a live marketplace.
+      # Switch back to external only after the three A2A URLs are set.
       - key: KULT_A2A_MODE
-        value: external
+        value: disabled
       - key: KULT_A2A_API_URL
         sync: false
       - key: KULT_A2A_CHAIN_API_URL
@@ -95,7 +96,3 @@ services:
         value: "true"
       - key: KULT_MIN_CONFIRMATIONS
         value: "1"
-    disk:
-      name: kult-world-data
-      mountPath: /var/data
-      sizeGB: 1
