@@ -1,0 +1,13 @@
+services:
+  kult-world:
+    build: .
+    ports:
+      - "8060:8060"
+    env_file:
+      - .env.production
+    volumes:
+      - kult-world-data:/var/data
+    restart: unless-stopped
+
+volumes:
+  kult-world-data:

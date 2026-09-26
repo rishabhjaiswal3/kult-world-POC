@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Radiant Hollow at night">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#10172d"/><stop offset=".55" stop-color="#18233a"/><stop offset="1" stop-color="#101d25"/></linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d3433"/><stop offset=".5" stop-color="#12262b"/><stop offset="1" stop-color="#17222b"/></linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#19435d"/><stop offset="1" stop-color="#17263f"/></linearGradient>
+    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#856dff" stop-opacity="0"/><stop offset=".45" stop-color="#8f7cff" stop-opacity=".38"/><stop offset=".72" stop-color="#4bd6dc" stop-opacity=".28"/><stop offset="1" stop-color="#4bd6dc" stop-opacity="0"/></linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4c5664"/><stop offset="1" stop-color="#2d3746"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="54" height="31" patternUnits="userSpaceOnUse"><path d="M27 0 54 15.5 27 31 0 15.5Z" fill="none" stroke="#7fa3b0" stroke-opacity=".08" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <path d="M-70 105C300 5 455 205 815 70c275-104 475 42 845-38v178H-70Z" fill="url(#aurora)" filter="url(#blur)" opacity=".85"/>
+  <g fill="#d9f5ff" opacity=".7"><circle cx="115" cy="83" r="1.8"/><circle cx="236" cy="136" r="1.2"/><circle cx="389" cy="67" r="1.4"/><circle cx="602" cy="118" r="1.8"/><circle cx="755" cy="49" r="1.1"/><circle cx="901" cy="129" r="1.5"/><circle cx="1090" cy="65" r="1.7"/><circle cx="1247" cy="115" r="1.2"/><circle cx="1452" cy="71" r="1.6"/></g>
+  <g opacity=".48"><path d="M0 390 165 236l111 91 157-190 146 198 128-114 143 130 135-184 159 186 133-112 323 206v154H0Z" fill="#172338"/><path d="m0 425 180-137 150 131 194-136 188 145 195-173 185 181 176-135 322 185v107H0Z" fill="#182d38"/></g>
+  <path d="M0 425c277 15 402-66 672-25 250 38 407-24 928 3v497H0Z" fill="url(#ground)"/>
+  <path d="M0 426c277 15 402-66 672-25 250 38 407-24 928 3v497H0Z" fill="url(#grid)"/>
+  <path d="M1220 521c151-28 271-8 380 41v338h-479c31-58 24-120 10-176-14-59-2-171 89-203Z" fill="url(#water)" opacity=".9"/>
+  <g fill="none" stroke="url(#road)" stroke-width="34" opacity=".86"><path d="M341 535c218 92 421 95 655 29 112-31 199-33 313 18"/><path d="M786 389c-23 109-2 252 52 401"/><path d="M420 724c103-85 209-131 366-150"/><path d="M1134 749c-97-95-195-142-297-176"/></g>
+  <g fill="none" stroke="#8fdbea" stroke-opacity=".18" stroke-width="2" stroke-dasharray="8 16"><path d="M341 535c218 92 421 95 655 29 112-31 199-33 313 18"/><path d="M786 389c-23 109-2 252 52 401"/></g>
+  <g opacity=".7"><path d="m1160 663 194-31 49 31-194 34Z" fill="#5d5967"/><path d="m1164 657 190-30 12 8-191 31Z" fill="#887a78"/></g>
+  <g fill="#1b3e38"><circle cx="100" cy="588" r="34"/><circle cx="138" cy="548" r="22"/><circle cx="218" cy="662" r="39"/><circle cx="1490" cy="489" r="37"/><circle cx="1529" cy="530" r="24"/><circle cx="1052" cy="792" r="35"/><circle cx="1112" cy="828" r="25"/><circle cx="535" cy="838" r="31"/></g>
+  <g fill="#75e8c5" filter="url(#glow)" opacity=".65"><circle cx="121" cy="553" r="3"/><circle cx="199" cy="626" r="2.5"/><circle cx="1478" cy="455" r="3"/><circle cx="1071" cy="765" r="2.5"/><circle cx="503" cy="814" r="3"/></g>
+  <g fill="#ffd889" filter="url(#glow)"><circle cx="314" cy="452" r="3"/><circle cx="518" cy="503" r="2.5"/><circle cx="679" cy="451" r="3"/><circle cx="928" cy="478" r="2.5"/><circle cx="1128" cy="435" r="3"/><circle cx="1378" cy="475" r="2.5"/></g>
+  <ellipse cx="800" cy="850" rx="590" ry="42" fill="#050a12" opacity=".38" filter="url(#blur)"/>
+</svg>

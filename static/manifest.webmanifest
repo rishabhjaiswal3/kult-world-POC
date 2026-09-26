@@ -1,0 +1,10 @@
+{
+  "name": "KULT World",
+  "short_name": "KULT World",
+  "description": "A persistent Agent world with real outcomes and portable proof.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070814",
+  "theme_color": "#070814",
+  "icons": [{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

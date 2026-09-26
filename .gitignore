@@ -1,0 +1,14 @@
+data/*.sqlite
+data/*.sqlite-*
+data/*.json
+data/*.tmp
+data/*.corrupt-*
+coverage/
+cache/
+out/
+node_modules/
+*.zip
+*.log
+.env
+
+.playwright-cli/

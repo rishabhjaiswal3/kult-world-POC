@@ -1,0 +1,101 @@
+services:
+  - type: web
+    name: kult-world-perp-wars
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/ready
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: KULT_PERSISTENCE
+        value: sqlite
+      - key: KULT_DATA_DB
+        value: /var/data/kult-world.sqlite
+      - key: KULT_SECURE_COOKIE
+        value: "true"
+      - key: KULT_0G_ENABLED
+        value: "false"
+      - key: KULT_0G_COMPUTE_ENDPOINT
+        sync: false
+      - key: KULT_0G_API_KEY
+        sync: false
+      - key: KULT_IDENTITY_GATEWAY_SECRET
+        sync: false
+      - key: PUBLIC_ORIGIN
+        sync: false
+
+      # Perp Wars: official OKX Agent Trade Kit, demo execution only.
+      - key: KULT_MARKET_ADAPTER
+        value: sim
+      - key: KULT_MARKET_ACCESS
+        value: enabled
+      - key: KULT_PULSE_REFERENCE_ADAPTER
+        value: sim
+      - key: KULT_PULSE_ACCELERATED
+        value: "false"
+      - key: KULT_WAIT_ACCELERATED
+        value: "false"
+      - key: OKX_AGENT_KIT_BIN
+        value: okx
+      - key: OKX_AGENT_KIT_TIMEOUT_MS
+        value: "15000"
+      - key: OKX_API_KEY
+        sync: false
+      - key: OKX_SECRET_KEY
+        sync: false
+      - key: OKX_PASSPHRASE
+        sync: false
+
+      # Real A2A marketplace. Deployment will fail closed if external URLs are missing.
+      - key: KULT_A2A_MODE
+        value: external
+      - key: KULT_A2A_API_URL
+        sync: false
+      - key: KULT_A2A_CHAIN_API_URL
+        sync: false
+      - key: KULT_A2A_MARKETPLACE_URL
+        sync: false
+      - key: KULT_A2A_SERVICE_BEARER
+        sync: false
+      - key: KULT_A2A_ESCROW_ADDRESS
+        value: 0xE4F7cB9aAf7dC9f800Cb3C1ea2c26696B2CEBEa3
+      - key: KULT_A2A_RECEIVER_ADDRESS
+        value: 0xD1fc9b992AEa52f8d91c6B49A3FDe21Cf3Ed307E
+
+      # X Layer proof/economy rail. Keep testnet until registry + UX are approved.
+      - key: KULT_XLAYER_NETWORK
+        value: testnet
+      - key: XLAYER_RPC_URL
+        value: https://rpc.xlayer.tech
+      - key: XLAYER_TESTNET_RPC_URL
+        value: https://testrpc.xlayer.tech/terigon
+      - key: KULT_MARKET_XLAYER_REGISTRY
+        sync: false
+
+      # OKX.AI A2MCP service metadata (free endpoints in v6.5).
+      - key: KULT_OKX_AI_NETWORK
+        value: mainnet
+
+      # Existing Passport / Robinhood proof rail.
+      - key: KULT_PROOF_RAIL_ENABLED
+        value: "false"
+      - key: ROBINHOOD_RPC_URL
+        sync: false
+      - key: ROBINHOOD_BROWSER_RPC_URL
+        value: https://rpc.testnet.chain.robinhood.com/rpc
+      - key: KULT_REGISTRY_ADDRESS
+        sync: false
+      - key: KULT_SEASON_COMMIT_TX
+        sync: false
+      - key: KULT_SEASON_PHASE
+        value: WORLD_OPEN
+      - key: KULT_ADMIN_TOKEN
+        generateValue: true
+      - key: TRUST_PROXY
+        value: "true"
+      - key: KULT_MIN_CONFIRMATIONS
+        value: "1"
+    disk:
+      name: kult-world-data
+      mountPath: /var/data
+      sizeGB: 1

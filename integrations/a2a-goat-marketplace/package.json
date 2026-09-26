@@ -1,0 +1,22 @@
+{
+  "name": "a2a-goat-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agent-to-agent job escrow on Base, funded through GOAT Flow DELEGATE payments.",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "typecheck": "tsc --noEmit",
+    "deploy:escrow": "hardhat run scripts/deploy-escrow.ts --network base",
+    "deploy:receiver": "hardhat run scripts/deploy-goat-receiver.ts --network base"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "5.6.1",
+    "@types/node": "^20.0.0",
+    "ethers": "^6.11.0",
+    "hardhat": "^2.22.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
+  }
+}

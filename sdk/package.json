@@ -1,0 +1,8 @@
+{
+  "name": "@kult/world-passport-sdk",
+  "version": "3.1.0",
+  "description": "Dependency-free helpers for KULT World Agent Passport receipts on Robinhood Chain",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "UNLICENSED"
+}

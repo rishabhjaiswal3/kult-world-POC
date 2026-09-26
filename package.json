@@ -1,0 +1,30 @@
+{
+  "name": "kult-world-fullstack",
+  "version": "6.5.0",
+  "private": true,
+  "description": "KULT World v6.5 \u2014 integrated full-stack build with real A2A GOAT/Base bridge, cinematic Three.js frontend, persistent Agent backend, Pulse, OKX Demo Perp Wars and deployment verification",
+  "main": "server.js",
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "test:contract": "forge test -vvv",
+    "demo:seed": "KULT_DEMO_SEED=yes node scripts/create-demo-world.js",
+    "check": "node --check server.js && node --check engine.js && node --check growth.js && node --check season.js && node --check og.js && node --check chain.js && node --check xlayer-market.js && node --check market-arena.js && node --check perps-game.js && node --check okx-ai.js && node --check okx-agent-kit.js && node --check pulse-engine.js && node --check a2a-marketplace.js && node --check a2a-goat-bridge.js && node --check world-runtime.js && node --check store.js && node --check sqlite-store.js && node --check intelligence.js && node --check identity.js && node --check static/app.js && node --check static/world3d.js && node --check static/perps3d.js && node --check static/market.js && node --check sdk/index.js && node --check scripts/render-okx-config.js && node --check scripts/production-smoke.js && node --check scripts/a2a-bridge-smoke.js && node --check scripts/a2a-kult-e2e.js && node --check scripts/fullstack-e2e.js && node --check scripts/a2a-production-config-smoke.js",
+    "test:prod-store": "node --test test/sqlite-store.test.js",
+    "migrate:sqlite": "node scripts/migrate-json-to-sqlite.js",
+    "backup": "node scripts/backup-sqlite.js",
+    "market:preflight": "node scripts/market-preflight.js",
+    "verify:release": "npm run check && npm test && npm run test:coverage && node scripts/a2a-bridge-smoke.js && node scripts/a2a-kult-e2e.js && node scripts/a2a-production-config-smoke.js && node scripts/production-smoke.js && KULT_MARKET_ADAPTER=sim node scripts/market-preflight.js",
+    "smoke:production": "node scripts/production-smoke.js",
+    "smoke:fullstack": "node scripts/fullstack-e2e.js",
+    "verify:fullstack": "npm run check && npm test && node scripts/a2a-bridge-smoke.js && node scripts/a2a-kult-e2e.js && node scripts/a2a-production-config-smoke.js && node scripts/fullstack-e2e.js && KULT_MARKET_ADAPTER=sim node scripts/market-preflight.js",
+    "smoke:a2a": "node scripts/a2a-bridge-smoke.js",
+    "smoke:a2a-e2e": "node scripts/a2a-kult-e2e.js",
+    "smoke:a2a-prod-config": "node scripts/a2a-production-config-smoke.js"
+  }
+}

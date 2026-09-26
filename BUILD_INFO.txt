@@ -1,0 +1,8 @@
+KULT World Full-Stack v6.5.0
+Release: Real A2A Integration
+Frontend: cinematic Three.js world
+Backend: Node + SQLite persistent Agent runtime
+Markets: Pulse simulation + KULT Perp Wars simulator/OKX Demo boundary
+A2A: external existing marketplace; GOAT Flow + Base USDC escrow
+Bundled integration source: integrations/a2a-goat-marketplace
+Production topology: single KULT writer instance
